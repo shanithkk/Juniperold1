@@ -1,0 +1,28 @@
+[package]
+name = "juniper_codegen"
+version = "0.14.2"
+authors = [
+    "Magnus Hallin <mhallin@fastmail.com>",
+    "Christoph Herzog <chris@theduke.at>",
+]
+description = "Internal custom derive trait for Juniper GraphQL"
+license = "BSD-2-Clause"
+documentation = "https://docs.rs/juniper"
+repository = "https://github.com/graphql-rust/juniper"
+edition = "2018"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+proc-macro2 = "1.0.1"
+syn = { version = "1.0.3", features = ["full", "extra-traits", "parsing"] }
+quote = "1.0.3"
+proc-macro-error = "0.3.4"
+futures = "0.3.1"
+
+[dev-dependencies]
+juniper = { version = "0.14.2", path = "../juniper"}
+
+[badges]
+travis-ci = { repository = "graphql-rust/juniper" }
